@@ -1,0 +1,8 @@
+body  {
+    background-image: url(../images/concrete.png);
+    background-repeat: repeat;
+}
+
+p   {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
