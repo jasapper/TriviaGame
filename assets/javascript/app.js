@@ -9,7 +9,7 @@ var questions = [{
 
 }, {	
 
-	question: "What is the count seat of Seminole County?",
+	question: "What is the county seat of Seminole County?",
 	answers: ["Sanford", "Orlando", "Kissimmee", "Oviedo"],
 	correctAnswer: "Oviedo"
 
@@ -61,18 +61,16 @@ var game = {
 
   begin: function() {
   	timer = setInterval(game.countdown, 1000);
-  	$('#question-panel').prepend('<h2>Time remaining: <span id="gameTimer">60</span> seconds</h2>');
+  	$('#question-panel').prepend('<hr><h2>Time remaining: <span id="gameTimer">60</span> seconds</h2><hr>');
   	$("#begin").remove();
 
   	for (var i = 0; i < questions.length; i++) {
-      panel.append('<h2>' + questions[i].question + '</h2>');
+      panel.append('<h4>' + questions[i].question + '</h4>');
       for (var j = 0; j < questions[i].answers.length; j++){
         panel.append('<input type="radio" name ="question' + '-' + i + '"value="' + questions[i].answers[j] + '">' + questions[i].answers[j]);
-        }
-  		}
-  		panel.append("<button id='end'>SUBMIT</button>");
-      
-  	},
+        }}
+  		panel.append("<br><button class='btn-warning btn-lg' id='end'>SUBMIT</button>");
+    },
 
   	end: function() {
 
@@ -130,11 +128,11 @@ var game = {
   	  results:function() {
   	  	clearInterval(timer);
 
-  	  	$("#question-panel h2").remove();
-  	   panel.html("<h2>YOUR RESULTS</h2>");
-  	   panel.append("<h3>Correct answers: " + this.correct + "</h3>");
-  	   panel.append("<h3>Incorrect answers: " + this.incorrect + "</h3>");
-  	   panel.append("<h3>Not answered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
+  	  	$("#question-panel h3").remove();
+  	   panel.html("<hr><h2>YOUR RESULTS</h2>");
+  	   panel.append("<h2>Correct answers: " + this.correct + "</h2>");
+  	   panel.append("<h2>Incorrect answers: " + this.incorrect + "</h2>");
+  	   panel.append("<h2>Not answered: " + (questions.length - (this.incorrect + this.correct)) + "</h2>");
   	  
   	  }
 };
