@@ -3,33 +3,33 @@ var panel = $("#question-panel");
 
 // Question & answer array
 var questions = [{
-	question: "",
-	answers: [""],
-	correctAnswer: ""
+	question: "What replaced the Orlando Naval Training Center after it was decommissioned in 1993?",
+	answers: ["Dairy Queen", "Baldwin Park", "Navy Museum", "Sinkhole"],
+	correctAnswer: "Baldwin Park"
 
 }, {	
 
-	question: "",
-	answers: [""],
-	correctAnswer: ""
+	question: "What is the count seat of Seminole County?",
+	answers: ["Sanford", "Orlando", "Kissimmee", "Oviedo"],
+	correctAnswer: "Oviedo"
 
 }, {
 
-	question: "",
-	answers: [""],
-	correctAnswer: ""
+	question: "Which U.S. astronaut grew up in Orlando and flew on the first Space Shuttle mission?",
+	answers: ["Neil Young", "John Glenn", "Alan Shepard", "John Young"],
+	correctAnswer: "John Young"
 
 }, {
 
-	question: "",
-	answers: [""],
-	correctAnswer: ""
+	question: "Which name was NOT considered for the Orlando Magic?",
+	answers: ["Heat", "Tropics", "Sunshine", "Juice"],
+	correctAnswer: "Sunshine"
 
 }, {
 
-	question: "",
-	answers: [""],
-	correctAnswer: ""
+	question: "What is the longest river in Central Florida and the entire State of Florida?",
+	answers: ["Wekiva", "St. Johns", "Econlockhatchee", "Smith"],
+	correctAnswer: "St. Johns"
 
 }];
 
