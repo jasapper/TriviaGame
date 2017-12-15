@@ -11,7 +11,7 @@ var questions = [{
 
 	question: "What is the county seat of Seminole County?",
 	answers: ["Sanford", "Orlando", "Kissimmee", "Oviedo"],
-	correctAnswer: "Oviedo"
+	correctAnswer: "Sanford"
 
 }, {
 
@@ -27,7 +27,7 @@ var questions = [{
 
 }, {
 
-	question: "What is the longest river in Central Florida and the entire State of Florida?",
+	question: "What is the longest river in Central Florida (as well as the entire state)?",
 	answers: ["Wekiva", "St. Johns", "Econlockhatchee", "Smith"],
 	correctAnswer: "St. Johns"
 
@@ -53,15 +53,14 @@ var game = {
   	$("#gameTimer").html(game.timer);
 
   	if (game.timer === 0) {
-  		alert("Time's up! Let's see how you did.");
+  		alert("Time's up! Let's see how you did...");
   		game.end();
-
   	}
   },
 
   begin: function() {
   	timer = setInterval(game.countdown, 1000);
-  	$('#question-panel').prepend('<hr><h2>Time remaining: <span id="gameTimer">60</span> seconds</h2><hr>');
+  	$('#question-panel').prepend('<hr><h3><strong>Time remaining: <span id="gameTimer">60</span> sec</strong></h3><hr>');
   	$("#begin").remove();
 
   	for (var i = 0; i < questions.length; i++) {
@@ -128,11 +127,11 @@ var game = {
   	  results:function() {
   	  	clearInterval(timer);
 
-  	  	$("#question-panel h3").remove();
-  	   panel.html("<hr><h2>YOUR RESULTS</h2>");
-  	   panel.append("<h2>Correct answers: " + this.correct + "</h2>");
-  	   panel.append("<h2>Incorrect answers: " + this.incorrect + "</h2>");
-  	   panel.append("<h2>Not answered: " + (questions.length - (this.incorrect + this.correct)) + "</h2>");
+  	  	$("#question-panel h4").remove();
+  	   panel.html("<hr><h3><strong>YOUR RESULTS</strong></h3>");
+  	   panel.append("<h3>Correct answers: " + this.correct + "</h3>");
+  	   panel.append("<h3>Incorrect answers: " + this.incorrect + "</h3>");
+  	   panel.append("<h3>Not answered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>");
   	  
   	  }
 };
