@@ -46,7 +46,7 @@ $(document).on("click", "#end", function(event){
 var game = {
 	correct: 0,
 	incorrect: 0,
-	timer: 30,
+	timer: 60,
 
   countdown: function() {
   	game.timer--;
